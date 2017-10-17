@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+.container {
+  padding-top: 50px;
+  height: 100%;
+  margin: auto;
+  width: 80%;
+}
+.background {
+  height: 100%;
+  display: block;
+  background-image:url('https://i.redd.it/sxwucxgele6z.jpg');
+  background-size: cover;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  -webkit-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
+  transform: scale(1.03);
+}
+.login-panel {
+  float: left;
+  border-radius: 5px;
+  z-index: 2;
+  width: 700px;
+  height: 500px;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+
+}
+.login-panel .left {
+  float: left;
+  display: inline-block;
+  border-left: 2px solid silver;
+  border-radius: 750px 0 0px 500px;
+  height: 100%;
+  width: 50%;
+}
+.login-title {
+  position: relative;
+  color: white;
+  text-align: center;
+  font-size: 6rem;
+  line-height: 500px;
+}
+ span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+ .art {
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+}
+ .gag {
+  position: relative;
+  top: 20px;
+  font-size: 2rem;
+}
+
+.login-panel .right {
+  float: left;
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  background: white;
+  border-radius: 50px 50px 50px 50px;
+  border-right: 2px solid silver;
+  border-left: 2px solid silver;
+  border-bottom:  0px solid silver;
+  z-index: 3;
+}
+.form-group {
+  text-align: left;
+  margin: auto;
+}
+.form-group input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 10px 10px 30px;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 5px 5px 5px 5px;
+  color: black;
+  -webkit-transition: border .3s;
+  transition: border .3s;
+}
+.form-group input:focus {
+  outline: none;
+  border: 2px solid black !important;
+  box-shadow: 0;
+}
+.form-group input[type="email"] { background: url("images/envelope.png") no-repeat scroll 8px 9px; }
+.form-group input[type="password"]{ background: url("images/locked-padlock.png") no-repeat scroll 8px 9px; }
+.form-group input[type="username"]{ background: url("images/user1.png") no-repeat scroll 8px 9px; }
+.form-group input::placeholder {
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+.heading {
+  color: black;
+  text-align: left;
+  padding-left: 10px;
+  padding-bottom: 40px;
+  letter-spacing: 0px;
+}
+.heading h1{
+  font-size: 2rem;
+}
+.login {
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  border-top: 0;
+  border-bottom: 2px solid silver;
+  border-left: 2px solid silver;
+  border-right: 2px solid silver;
+  background: black;
+  padding: 10px;
+  width: 100%;
+}
+.text {
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding-bottom: 10px;
+  color: black;
+}
+.text a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+#sign-up input:nth-child(3) {
+  display: inline-block;
+  float: left;
+  width: 48%;
+  margin-bottom: 35px;
+}
+#sign-up input:nth-child(4) {
+  background: none;
+  padding-left: 5px;
+  display: inline-block;
+  float: right;
+  width: 48%;
+  margin-bottom: 35px;
+}
+.back-login {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  border-top: 0;
+  border-bottom: 2px solid silver;
+  border-left: 2px solid silver;
+  border-right: 2px solid silver;
+  background: black;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  text-decoration: none !important;
+  color: white;
+  padding: 10px;
+}
+.back-login input::placeholder {
+  color white;
+}
+.popup {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.login .popup-content {
+  visibility: hidden;
+  width: 200px;
+  background: gray;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+.login .popup .popup-content::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: gray transparent transparent transparent;
+}
+.login .popup .show {
+  visibility: visible !important;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.navigation {
+  position: relative;
+  float: left;
+  z-index: 1;
+  width: 100%;
+  background: white;
+  border-bottom: 2px solid gray;
+}
+.navigation .logo {
+  padding: 10px;
+  float: left;
+  width: 40%;
+}
+.navigation .logo .art {
+  font-size: 3rem;
+}
+.navigation .logo .gag {
+  font-size: 1rem;
+  top: 10px;
+}
+.navigation > ul {
+    float: left;
+    width: 60%;
+    text-align: right;
+}
+.navigation > ul > li {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 33px;
+}
+.navigation > ul > li > a {
+  text-decoration: none;
+  color: black;
+  }
+.profile {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.profile .container {
+  width: 800px;
+}
+.profile .content {
+  padding: 10px;
+  border-left: 2px solid gray;
+  border-right: 2px solid gray;
+  border-radius: 5px;
+  z-index: 1;
+  position: relative;
+  background: white;
+}
+.profile .avatar {
+  margin-right: 20px;
+  float: left;
+}
+.profile .avatar img{
+  height: 100px;
+  width: 100px;
+}
+.profile .info {
+  float: left;
+}
+.profile .info .username {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.profile .info p {
+  font-size: 1rem;
+}
+.profile .user-content {
+
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0 20px 0;
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.user-content .posts {
+  margin-right: 5px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  background: black;
+  float: left;
+  width: calc(50% - 5px);
+}
+.user-content .comments {
+  margin-left: 5px;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  background: black;
+  float: left;
+  width: calc(50% - 5px);
+}
+.navigation > ul > .login-button {
+  padding: 0;
+}
+.navigation > ul > .login-button > a {
+  border-radius: 5px;
+  padding: 20px;
+  background: black;
+  color: white;
+}

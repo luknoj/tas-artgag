@@ -1,4 +1,4 @@
-ReactJS Node.js + MYSql
+ReactJS Node.js + MYSql / nginx / http lite
 
 Funkcjonalnosc strony:
 

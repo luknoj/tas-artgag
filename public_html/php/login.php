@@ -1,5 +1,6 @@
 <?php
 	require('config.php');
+	session_start();
 	if (isset($_POST['login-button'])) {
 		$username = mysqli_real_escape_string($con,$_POST['username']);
 		$password = mysqli_real_escape_string($con,$_POST['password']);
@@ -19,11 +20,15 @@
 				$_SESSION['success'] = "You are now logged in";
 				$row = mysqli_fetch_array($result);
 				$date = $row['creationDate'];
+				$user_id = $row['userId'];
+				$rights = $row['is_admin'];
 				$newDate = strtotime($date);
 				$_SESSION['date'] = date('d.m.Y', $newDate);
+				$_SESSION['user_id'] = $user_id;
+				$_SESSION['rights'] = $rights;
 				header('location: profile.php');
 			}else{
-				echo '<p class="text" style="color: red;">Wrong username or password</p>';
+				$_SESSION['error'] = "Wrong username or password";
 			}
 		}
 	}

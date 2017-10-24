@@ -4,7 +4,8 @@
   margin: 0;
 }
 html {
-  height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -22,7 +23,8 @@ body {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 .container {
-  padding-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   height: 100%;
   margin: auto;
   width: 80%;
@@ -102,7 +104,8 @@ body {
   text-align: left;
   margin: auto;
 }
-.form-group input {
+.form-group input,textarea {
+  resize: none;
   width: 100%;
   margin: 10px 0;
   padding: 10px 10px 10px 30px;
@@ -115,7 +118,7 @@ body {
   -webkit-transition: border .3s;
   transition: border .3s;
 }
-.form-group input:focus {
+.form-group input:focus , textarea:focus {
   outline: none;
   border: 2px solid black !important;
   box-shadow: 0;
@@ -123,7 +126,9 @@ body {
 .form-group input[type="email"] { background: url("images/envelope.png") no-repeat scroll 8px 9px; }
 .form-group input[type="password"]{ background: url("images/locked-padlock.png") no-repeat scroll 8px 9px; }
 .form-group input[type="username"]{ background: url("images/user1.png") no-repeat scroll 8px 9px; }
-.form-group input::placeholder {
+.form-group
+input::placeholder,
+textarea::placeholder {
   background: transparent;
   font-family: 'Roboto', sans-serif;
   color: black;
@@ -177,7 +182,7 @@ body {
   width: 48%;
   margin-bottom: 35px;
 }
-.back-login {
+.border-btn {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
@@ -245,6 +250,7 @@ body {
   float: left;
   z-index: 1;
   width: 100%;
+  margin-bottom: 20px;
   background: white;
   border-bottom: 2px solid gray;
 }
@@ -275,15 +281,17 @@ body {
   text-decoration: none;
   color: black;
   }
-.profile {
+.main {
+  margin-bottom: 115px;
   width: 100%;
   float: left;
   position: relative;
 }
-.profile .container {
+.main .container {
   width: 800px;
 }
-.profile .content {
+.main .content {
+  word-wrap: break-word;
   padding: 10px;
   border-left: 2px solid gray;
   border-right: 2px solid gray;
@@ -292,26 +300,26 @@ body {
   position: relative;
   background: white;
 }
-.profile .avatar {
+.main .avatar {
   margin-right: 20px;
   float: left;
 }
-.profile .avatar img{
+.main .avatar img{
   height: 100px;
   width: 100px;
 }
-.profile .info {
+.main .info {
   float: left;
 }
-.profile .info .username {
+.main .info .username {
   margin-bottom: 10px;
   font-size: 1.5rem;
   font-weight: bold;
 }
-.profile .info p {
+.main .info p {
   font-size: 1rem;
 }
-.profile .user-content {
+.main .user-content {
 
   font-size: 1rem;
   font-weight: bold;
@@ -321,8 +329,8 @@ body {
   float: left;
   position: relative;
 }
-.user-content .posts {
-  margin-right: 5px;
+.dft-btn {
+  border: 0;
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -330,21 +338,59 @@ body {
   float: left;
   width: calc(50% - 5px);
 }
-.user-content .comments {
-  margin-left: 5px;
-  padding: 10px;
-  color: white;
-  border-radius: 5px;
-  background: black;
-  float: left;
-  width: calc(50% - 5px);
-}
+
 .navigation > ul > .login-button {
-  padding: 0;
+  padding: 33px 13px;
 }
 .navigation > ul > .login-button > a {
   border-radius: 5px;
   padding: 20px;
   background: black;
+  color: white;
+  border-bottom: 2px solid silver;
+}
+.post {
+  min-height: 100%;
+}
+.user-post {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.post-head {
+  padding: 10px 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 2px solid silver;
+}
+.post-head .title {
+  float: left;
+  width: 50%;
+}
+.post-head .date {
+  text-align: right;
+  float: left;
+  width: 50%;
+}
+.post-content {
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+  font-size: 11px;
+}
+.post-image img {
+  width: 100%;
+}
+footer {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  z-index: 2;
+}
+.footer {
+  font-size: 0.8rem;
+  padding: 50px 0;
+  text-align: center;
   color: white;
 }

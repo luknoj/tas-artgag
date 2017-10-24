@@ -30,15 +30,18 @@
 						<input type="username" name="username" placeholder="Username" value="<?php echo $username; ?>"required>
 						<input type="password" name="password_1" placeholder="Password" required>
 						<input type="password" name="password_2" placeholder="Confirm password" required>
-						<button type="submit" class="login" name="signup-button">Sign up</button>
+						<button class="border-btn" type="submit" class="login" name="signup-button">Sign up</button>
 						</div>
 					</form>
 					<form action="index.php">
-							<input type="submit" id="login-back" class="back-login" value="Login" />
+							<input class="border-btn" type="submit" id="login-back" class="back-login" value="Login" />
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+  <footer>
+    <p class="footer">© 2017 Adam Mickiewicz University in Poznań</p>
+  </footer>
 </body>
 </html>

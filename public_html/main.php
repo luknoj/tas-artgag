@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,15 +16,20 @@
 		<span class="art">ART.</span><span class="gag">gag</span>
 	</div>
 	<ul>
-		<li>Hot</li>
-		<li>Waiting</li>
+		<li><a href="que.php">Waiting</a></li>
+    <?php if (!isset($_SESSION['username'])) {?>
 		<li class="login-button"><a href="index.php">Login</a></li>
-	</ul>
+    <?php }else{ ?>
+    <li><a href="add_post.php">Add post</a></li>
+    <li><a href="profile.php">Profile</a></li>
+    <li><a href="index.php?logout='1'">Log out</a></li>
+    <?php } ?>
+  </ul>
 </nav>
 <section class="main">
-	<div class="container">
-		<div class="content clearfix">
-		</div>
-	</div>
+<?php include('php/hot_posts.php') ?>
 </section>
+<footer>
+  <p class="footer">© 2017 Adam Mickiewicz University in Poznań</p>
+</footer>
 </body>

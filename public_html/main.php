@@ -16,6 +16,7 @@
 		<span class="art">ART.</span><span class="gag">gag</span>
 	</div>
 	<ul>
+    <li><a href="main.php">Hot</a></li>
 		<li><a href="que.php">Waiting</a></li>
     <?php if (!isset($_SESSION['username'])) {?>
 		<li class="login-button"><a href="index.php">Login</a></li>

@@ -20,7 +20,7 @@ if (isset($_SESSION['username'])) {
 	</div>
 	<ul>
     <li><a href="main.php">Hot</a></li>
-		<li>Waiting</li>
+		<li><a href="que.php">Waiting</a></li>
     <li><a href="profile.php">Profile</a></li>
     <li><a href="index.php?logout='1'">Log out</a></li>
   </ul>

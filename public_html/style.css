@@ -104,7 +104,7 @@ body {
   text-align: left;
   margin: auto;
 }
-input,textarea {
+.form-group input,textarea {
   resize: none;
   width: 100%;
   margin: 10px 0;
@@ -123,9 +123,10 @@ input,textarea {
   border: 2px solid black !important;
   box-shadow: 0;
 }
-#login input[type="email"] { background: url("images/envelope.png") no-repeat scroll 8px 9px; }
-#login input[type="password"]{ background: url("images/locked-padlock.png") no-repeat scroll 8px 9px; }
-#login input[type="username"]{ background: url("images/user1.png") no-repeat scroll 8px 9px; }
+.form-group input[type="email"] { background: url("images/envelope.png") no-repeat scroll 8px 9px; }
+.form-group input[type="password"]{ background: url("images/locked-padlock.png") no-repeat scroll 8px 9px; }
+.form-group input[type="username"]{ background: url("images/user1.png") no-repeat scroll 8px 9px; }
+.form-group
 input::placeholder,
 textarea::placeholder {
   background: transparent;
@@ -290,7 +291,6 @@ textarea::placeholder {
   width: 800px;
 }
 .main .content {
-  word-wrap: break-word;
   padding: 10px;
   border-left: 2px solid gray;
   border-right: 2px solid gray;
@@ -319,6 +319,7 @@ textarea::placeholder {
   font-size: 1rem;
 }
 .main .user-content {
+
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
@@ -350,23 +351,17 @@ textarea::placeholder {
 .post {
   min-height: 100%;
 }
-.user-post {
-  position: relative;
-  float: left;
-  width: 100%;
-  margin-bottom: 20px;
-}
-.post-head {
+.post .post-head {
   padding: 10px 0px;
   margin-left: 20px;
   margin-right: 20px;
   border-bottom: 2px solid silver;
 }
-.post-head .title {
+.post .post-head .title {
   float: left;
   width: 50%;
 }
-.post-head .date {
+.post .post-head .date {
   text-align: right;
   float: left;
   width: 50%;
@@ -391,39 +386,4 @@ footer {
   padding: 50px 0;
   text-align: center;
   color: white;
-}
-.user-info {
-  width: 100%;
-}
-.user-info .half {
-  position: relative;
-  float: left;
-  width: 50%;
-}
-.user-info a {
-  margin: 8% 25%;
-  font-size: 1rem;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-}
-.heading-center {
-  text-align: center;
-  font-size: 2rem;
-  color: black;
-}
-.simple-input {
-  float: left;
-  border-radius: 5px;
-  border: 2px solid black;
-  background: transparent;
-  padding: 10px;
-}
-.s-title{
-  font-size: 1rem;
-  padding: 10px 0;
-}
-.s-horizontal {
-  padding-top: 10px;
-  padding-bottom: 10px;
 }

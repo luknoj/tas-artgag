@@ -16,19 +16,18 @@
 		<span class="art">ART.</span><span class="gag">gag</span>
 	</div>
 	<ul>
-    <li><a href="main.php">Hot</a></li>
-		<li><a href="que.php">Waiting</a></li>
+    <li>Hot</li>
+		<li>Waiting</li>
     <?php if (!isset($_SESSION['username'])) {?>
 		<li class="login-button"><a href="index.php">Login</a></li>
     <?php }else{ ?>
     <li><a href="add_post.php">Add post</a></li>
-    <li><a href="profile.php">Profile</a></li>
     <li><a href="index.php?logout='1'">Log out</a></li>
     <?php } ?>
   </ul>
 </nav>
 <section class="main">
-<?php include('php/hot_posts.php') ?>
+<?php include('php/render_posts.php') ?>
 </section>
 <footer>
   <p class="footer">© 2017 Adam Mickiewicz University in Poznań</p>

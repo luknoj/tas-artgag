@@ -20,44 +20,34 @@
 	</div>
 	<ul>
 		<li><a href="main.php">Hot</a></li>
-		<li><a href="que.php">Waiting</a></li>
-    <li><a href="add_post.php">Add post</a></li>
+		<li>Waiting</li>
+    	<li><a href="add_post.php">Add post</a></li>
 		<li><a href="index.php?logout='1'">Log out</a></li>
 	</ul>
 </nav>
 <section class="main">
 	<div class="container">
 		<div class="content clearfix">
-      <div class="user-info clearfix">
-        <div class="half clearfix">
-          <div class="avatar"><img src="https://i1.kwejk.pl/k/users/thumbs/default.png"></div>
-          <div class="info">
-            <p class="username">
-              <?php
-                echo $_SESSION['username'];
-                unset($_SESSION['success']);
-              ?>
-            </p>
-            <p>
-              <?php
-                echo $_SESSION['date'];
-              ?>
-             </p>
-             <p style="width: 100%;">Ilość postów</p>
-     				<p style="width: 100%;">Ilość komentarzy</p>
-           </div>
-        </div>
-        <?php if ($_SESSION['rights'] == 1) {?>
-        <div class="half clearfix">
-            <a class="dft-btn" href="admin.php">Admin</a>
-        </div>
-        <?php } ?>
+			<div class="avatar"><img src="https://i1.kwejk.pl/k/users/thumbs/default.png"></div>
+			<div class="info">
+				<p class="username">
+					<?php
+						echo $_SESSION['username'];
+						unset($_SESSION['success']);
+					?>
+				</p>
+				<p>
+					<?php
+				 		echo $_SESSION['date'];
+				 	?>
+				 </p>
+				<p>Ilość postów</p>
+				<p>Ilość komentarzy</p>
 			</div>
 			<div class="user-content">
 				<p class="dft-btn" style="margin-right: 5px;">User posts</p>
 				<p class="dft-btn">User comments</p>
 			</div>
-              <?php include("php/user_post.php"); ?>
 		</div>
 	</div>
 </section>

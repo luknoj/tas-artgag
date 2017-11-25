@@ -13,11 +13,11 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 		        <h1 class="date">%s</h1>
 		    </div>
       		<div class="post-content">
-        		<p>%s</p>
+			  	<img src="%s" alt="%s">
       		</div>
     	</div>
 	</div>
 	'
-	,$row['title'], $row['post_date'], $row['content']);
+	,$row['title'], $row['post_date'], $row['content'],$row['title']);
 }
  ?>

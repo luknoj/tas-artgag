@@ -7,8 +7,8 @@
 	use Aws\S3\S3Client;
 	use Aws\S3\Exception\S3Exception;
 	$bucketName = 'webappuam';
-	$IAM_KEY = 'AKIAIV7KJ7BKPJIR6Q5A';
-	$IAM_SECRET = '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';
+	$IAM_KEY = '';
+	$IAM_SECRET = '';
 
     $s3 = S3Client::factory(
         array(

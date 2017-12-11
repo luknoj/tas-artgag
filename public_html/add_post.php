@@ -1,4 +1,4 @@
-<?php include("php/add.php") ?>
+<?php include './php/add.php'?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,12 +28,17 @@ if (isset($_SESSION['username'])) {
 <section class="main">
 	<div class="container">
 		<div class="content clearfix">
-      <form class="form-group clearfix" method="post" action="">
-        <input type="text" name="title" placeholder="Post title" value="<?php echo $title ?>" required>
-        <textarea rows="15" name="content" placeholder="Please insert your article here..."  required><?php echo $content ?></textarea>
-        <button class="dft-btn" style="width: 100%;" type="submit" name="submit-post">Submit</button>
+      <form
+              action="./upload/upload.php"
+              class="form-group clearfix"
+              method="post"
+              enctype="multipart/form-data"
+      >
+        <input type="text" name="title" placeholder="Post title" value="<?php echo $title ?>">
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <input type="submit" value="Upload Image" name="submit">
       </form>
-        <p class="text" style="color: green; padding-top: 10px; font-size: 1rem;"><?php echo $success; ?></p>
+        <p class="text" style="color: green; padding-top: 10px; font-size: 1rem;"><?php echo $_SESSION['success']; ?></p>
 			</div>
 		</div>
 	</div>

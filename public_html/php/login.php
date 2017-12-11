@@ -1,6 +1,7 @@
 <?php
 	require('config.php');
 	session_start();
+	$_SESSION['error'] = '';
 	if (isset($_POST['login-button'])) {
 		$username = mysqli_real_escape_string($con,$_POST['username']);
 		$password = mysqli_real_escape_string($con,$_POST['password']);

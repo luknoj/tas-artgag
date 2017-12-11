@@ -28,7 +28,7 @@
 					</div>
           <p class="text" style="color: red;"><?php echo $_SESSION['error']; ?> </p>
 					<form class="form-group" method="post" action="">
-						<input  type="username" name="username" placeholder="Username" value="<?php echo $username; ?>">
+						<input  type="username" name="username" placeholder="Username" value="">
 						<input  type="password" name="password" placeholder="Password">
 						<p class="text" style="text-align: right;">Forgot Password? <a href="">Retrive it!</a></p>
 						<button class="border-btn" type="submit" name="login-button">Sign in</button>

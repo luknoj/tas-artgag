@@ -377,7 +377,7 @@ textarea::placeholder {
   width: 100%;
   font-size: 11px;
 }
-.post-image img {
+.post-content > img {
   width: 100%;
 }
 footer {
@@ -426,4 +426,25 @@ footer {
 .s-horizontal {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.singlepost-form {
+  width: 700px;
+  margin: auto;
+}
+.singlepost-input {
+  position: relative;
+  z-index: 1;
+  background: white;
+  width: 100%;
+  padding: 10px 10px 10px 30px;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 5px 5px 5px 5px;
+  color: black;
+}
+.singlepost-form button {
+  position: relative;
+  z-index: 1;
 }

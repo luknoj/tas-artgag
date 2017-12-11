@@ -1,8 +1,8 @@
 <?php
-  define('DBHOST', 'mysql.wmi.amu.edu.pl');
-  define('DBUSER', 's407274');
-  define('DBPASS', 'kukis4563');
-  define('DBNAME', 's407274_artgag');
+  define('DBHOST', '127.0.0.1'); //mysql.wmi.amu.edu.pl
+  define('DBUSER', 'root'); // s407274
+  define('DBPASS', ''); // kukis4563
+  define('DBNAME', 'test2'); // s407274_artgag
   $errors = array();
   $con = mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME);
 

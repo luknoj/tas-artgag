@@ -1,7 +1,7 @@
 <?php
 require ('config.php');
 
-$query = "SELECT * FROM articles WHERE accepted=0";
+$query = "SELECT * FROM articles WHERE accepted=0 ORDER BY post_date DESC";
 $result = mysqli_query($con,$query);
 
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -13,7 +13,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 		        <h1 class="date">%s</h1>
 		    </div>
       		<div class="post-content">
-        		<p>%s</p>
+        		<img src="%s" alt="">
       		</div>
     	</div>
 	</div>
